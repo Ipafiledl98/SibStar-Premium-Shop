@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قوانین خرید اشتراک آیفون - SibStar Premium</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #007bff, #0056b3);
+            --success-gradient: linear-gradient(135deg, #28a745, #1e7e34);
+            --gold-gradient: linear-gradient(135deg, #ffd700, #ffb347);
+            --background-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Vazir', sans-serif;
+            background: var(--background-gradient);
+            color: #2c3e50;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .back-btn {
+            background: var(--primary-gradient);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        .device-info {
+            text-align: center;
+            flex: 1;
+        }
+
+        .device-info h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            background: var(--success-gradient);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .main-content {
+            padding: 40px 20px 120px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .rule-item {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .rule-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary-gradient);
+        }
+
+        .rule-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .rule-item.golden {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 179, 71, 0.1));
+            border: 2px solid #ffd700;
+        }
+
+        .rule-item.golden::before {
+            background: var(--gold-gradient);
+        }
+
+        .rule-item.golden::after {
+            content: '⭐ ویژه';
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: var(--gold-gradient);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .rule-item h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .rule-item.golden h3 {
+            color: #b8860b;
+        }
+
+        .sticky-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 20px;
+            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .sticky-footer input {
+            margin-bottom: 15px;
+            margin-right: 10px;
+        }
+
+        .sticky-footer button {
+            width: 100%;
+            max-width: 400px;
+            padding: 18px;
+            background: var(--success-gradient);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .sticky-footer button:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .sticky-footer button:not(:disabled):hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+
+            .rule-item {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="fori.html" class="back-btn">بازگشت</a>
+        <div class="device-info">
+            <h2>آیفون</h2>
+            <div class="price">قیمت: ۷۲۹ هزار تومان</div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="rule-item golden">
+            <h3>🎁 هدیه ویژه: اشتراک یکساله SibStars.ir</h3>
+            <p>با خرید این اشتراک، اشتراک یکساله کامل سایت sibstars.ir را نیز دریافت خواهید کرد.</p>
+        </div>
+
+        <div class="rule-item">
+            <h3>مزیت خرید اشتراک</h3>
+            <p>می‌توانید هر فایل IPA را بدون لپ‌تاپ نصب کنید.</p>
+        </div>
+
+        <div class="rule-item">
+            <h3>قیمت نهایی</h3>
+            <p>۷۲۹ هزار تومان</p>
+        </div>
+    </div>
+
+    <div class="sticky-footer">
+        <input type="checkbox" id="agreeCheck">
+        <label for="agreeCheck">با قوانین موافقم</label>
+        <button id="subscribeBtn" disabled>خرید اشتراک آیفون</button>
+    </div>
+
+    <script>
+        const agreeCheck = document.getElementById('agreeCheck');
+        const subscribeBtn = document.getElementById('subscribeBtn');
+
+        agreeCheck.addEventListener('change', function () {
+            subscribeBtn.disabled = !this.checked;
+        });
+
+        subscribeBtn.addEventListener('click', function () {
+            window.location.href = 'https://t.me/scarlet_shopbot?start=B_ba7544';
+        });
+    </script>
+</body>
+</html>
