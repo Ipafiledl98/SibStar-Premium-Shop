@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PDF Viewer</title>
+  <meta charset="utf-8">
+  <style>
+    body { margin:0; height:100vh; display:flex; flex-direction:column; }
+    #urlInput { width:100%; padding:10px; box-sizing:border-box; font-size:16px; }
+    #viewerContainer { flex:1; }
+  </style>
+</head>
+<body>
+  <input id="urlInput" type="text" placeholder="لینک مستقیم PDF را وارد کنید و Enter بزنید">
+  <iframe id="viewerContainer" style="width:100%; height:100%; border:none;"></iframe>
+
+  <script>
+    const input = document.getElementById('urlInput');
+    const viewer = document.getElementById('viewerContainer');
+
+    input.addEventListener('keypress', function(e){
+      if(e.key === 'Enter'){
+        const url = encodeURIComponent(input.value.trim());
+        viewer.src = `https://mozilla.github.io/pdf.js/web/viewer.html?file=${url}`;
+      }
+    });
+  </script>
+</body>
+</html>
